@@ -46,9 +46,54 @@ You are reading some documents on your laptop that you will no longer have acces
 
 ### 4. Use this script to:
 - Break an MP4 file into smaller segments.
-- Extract frames from an MP4 file and convert them into text documents using OCR.
-- For example, suppose you have an MP4 file (`GH020138.MP4`) that you filmed of a PDF document using your GoPro camera or mobile phone. You can extract the portion that contains the document, such as from 00:00:00 to 00:02:04.
+- Extract frames from an MP4 file
+- Convert them into text documents using OCR.
+- For example, suppose you have an MP4 file (`GH020138.MP4`) that you filmed of a PDF document using your GoPro camera or mobile phone.
+  You can extract the portion that contains the document, such as from 00:00:00 to 00:02:04 usging the command:
 
+  create_seg.bat GH020138.MP4 00:00:00 00:02:04
+
+- Suggest use:
+- 
+  Copy your MP4 file to an empty directory,(folder).
+  Example:
+  
+      C:\> mkdir convert_mp4
+  
+      C:\> cd convert_mp4
+  
+      C:\convert_mp4> copy C:\Users\%username%\Documents\GH020138.MP4 .
+  
+      C:\convert_mp4> create_seg.bat GH020138.MP4 00:00:00 00:02:04
+
+      This assumes your file is in C:\Users\%username%\Documents and its name is GH020138.MP4
+  
+      Reason: The convert_mp4 directory will contain only the resulting .txt file of the converted file.
+  This command assume your create_seg.bat is in the path, if not please add it in your PATH variable, or
+  temporary change it, exaple:
+
+#### 4.1 Change your PATH:
+
+      Supposed you downloaded and copy the BAT file create_seg.bat to the following:
+
+      C:\BATS> dir 
+      Volume in drive C is Windows-SSD
+      Volume Serial Number is 3893-E587
+    
+      Directory of C:\BATS
+    
+      04/04/2025  10:58 am    <DIR>          .
+      04/03/2025  11:27 am    <DIR>          ..
+      05/03/2025  10:51 am    <DIR>          .vagrant
+                        1 Dir(s)  14,729,920,512 bytes free
+
+    - Before use the script you need to change the PATH
+    
+      cd \convert_mp4
+
+      C:\convert_mp4> set PATH=%PATH%;C:\BATS
+    
+               
 ---
 
 ### 5. Steps
@@ -184,5 +229,3 @@ echo Process completed. Combined TXT file created: combined_output_%~n1.txt.
    - A file named `output.txt` will be created with the extracted text.
 
 ---
-
-This version includes the full content and maintains a clean, professional format for easy reading and usability. Let me know if this fits your needs! 🚀
