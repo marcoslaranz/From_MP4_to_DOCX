@@ -34,7 +34,14 @@
 ---
 
 ### 2. Problem
-You are reading some documents on your laptop that you will no longer have access to after a specific time. Therefore, you won't be able to read them later, and you cannot copy or email this content to yourself. However, you want to keep these documents because you might want to read them later, perhaps to print or create personalized material for yourself.
+
+You are reading some documents on your laptop that you will no longer have access to after a specific time. Therefore, you won't be able to read them later, and you cannot copy or email this content to yourself. However, you should keep these documents because you might want to read them later or print them or create personalized material.
+
+### 2.1 Weakness: 
+
+    - The script in this repository does not fully resolve the issue. It generates a .TXT file, which 
+      must be imported and edited in MS Word to create the final document. 
+    - Additionally, the images in the original document do not convert properly into text.
 
 ---
 
@@ -69,12 +76,12 @@ You are reading some documents on your laptop that you will no longer have acces
       This assumes your file is in C:\Users\%username%\Documents and its name is GH020138.MP4
   
       Reason: The convert_mp4 directory will contain only the resulting .txt file of the converted file.
-  This command assume your create_seg.bat is in the path, if not please add it in your PATH variable, or
-  temporary change it, exaple:
+  This command assumes your create_seg.bat is in the PATH; if not, please add it in your PATH variable, or
+  temporarily change it, example:
 
 #### 4.1 Change your PATH:
 
-      Supposed you downloaded and copy the BAT file create_seg.bat to the following:
+      Supposed you downloaded and copied the BAT file create_seg.bat to the following:
 
       C:\BATS> dir 
       Volume in drive C is Windows-SSD
@@ -84,10 +91,10 @@ You are reading some documents on your laptop that you will no longer have acces
     
       04/04/2025  10:58 am    <DIR>          .
       04/03/2025  11:27 am    <DIR>          ..
-      05/03/2025  10:51 am    <DIR>          .vagrant
+      05/03/2025  10:51 am    <DIR>          create_seg.bat
                         1 Dir(s)  14,729,920,512 bytes free
 
-    - Before use the script you need to change the PATH
+    - Before using the script, you need to change the PATH
     
       cd \convert_mp4
 
