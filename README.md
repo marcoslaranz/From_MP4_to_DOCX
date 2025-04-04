@@ -1,3 +1,15 @@
+![FFmpeg](https://img.shields.io/badge/Tool-FFmpeg-green)
+![Tesseract](https://img.shields.io/badge/Tool-Tesseract-blue)
+![OCR](https://img.shields.io/badge/Category-OCR-yellow)
+
+## Tags
+- Edit MP4 as Word Document (TXT)
+- Video Processing
+- OCR (Optical Character Recognition)
+- FFmpeg
+- Tesseract
+- Automation
+
 # Edit MP4 as Word Document
 ---
 
